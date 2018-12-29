@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
 
 urlpatterns = [
+    path('<str:user_name>', views.listUserWorlds, name="user-worlds"),
+    path('<str:user_name>/<str:world_name>', views.detail, name="detail"),
     path('admin/', admin.site.urls),
 ]
