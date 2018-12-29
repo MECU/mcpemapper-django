@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [u'MECU.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'mcpemapper.apps.MCPEMapperConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
