@@ -27,7 +27,7 @@ SECRET_KEY = '$()s)gjfi&2!@jpeo+-@oqvf8p=sy%9))rnit49*d^_l_x7f#q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [u'MECU.pythonanywhere.com']
+ALLOWED_HOSTS = [u'MECU.pythonanywhere.com', u'127.0.0.1']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'mcpemapper.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': os.getenv("DATABASE_TYPE"),
         'NAME': os.getenv("DATABASE_NAME"),
         'USER': os.getenv("DATABASE_USER"),
         'PASSWORD': os.getenv("DATABASE_PASSWORD"),
