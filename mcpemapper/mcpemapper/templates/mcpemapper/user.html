@@ -1,0 +1,16 @@
+
+User {{ user.username }}
+{% if worlds %}
+    <ul>
+    {% for world in worlds %}
+        <li>
+            <a href="/{{ world.owner.username }}/world/{{ world.name }}">{{ world.name }}</a>
+            <a href="/{{ world.owner.username }}/world/{{ world.name }}/map"><button>Map</button></a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>This user has no worlds available for you to view.</p>
+{% endif %}
+
+<!-- TODO: Link to Xbox User account-->
